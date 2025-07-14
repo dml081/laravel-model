@@ -4,8 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 
 Route::get('/', function () {//controller - called the anonymous controller
-    return view('welcome');
+    return view('extender');
 });
+
+Route::get('/react', function(){
+    return view("react");
+});
+
 
 Route::get('/contact-us', [FormController::class, "ContactFormRender"]);
 
