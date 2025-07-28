@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();//column will have the column name of id, auto_increment primary_key
             $table->string('name', 255);//data type string
             $table->longText("description");
+            $table->foreignId("user_id")->constrained()->onDelete("restrict");
             $table->string("image", 255);
             $table->float("price", 2);
             $table->string("category", 255);
